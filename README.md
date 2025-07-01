@@ -30,5 +30,4 @@ A Simple Chrome extension that helps you **track daily habits**, **build streaks
 4. Click **Load unpacked** and select this project folder.  
 5. You’re ready to go!
 
-## 📝 File Structure
 
