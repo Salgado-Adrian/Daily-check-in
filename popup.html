@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Daily Check-In</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 15px;
+      width: 360px;
+      background-color: #fefefe;
+    }
+
+    h1 {
+      font-size: 18px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .input-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    #newGoalInput {
+      width: 70%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    #addGoalBtn {
+      width: 25%;
+      padding: 8px;
+      font-size: 14px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #addGoalBtn:hover {
+      background-color: #45a049;
+    }
+
+    #goalsContainer {
+      margin-bottom: 20px;
+    }
+
+    #goalsContainer label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f9f9f9;
+      padding: 8px 10px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .goal-text {
+      flex: 1;
+      word-break: break-word;
+    }
+
+    .goal-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .streak {
+      font-size: 13px;
+      color: #ff5722;
+    }
+
+    #toggleHistoryBtn {
+      width: 100%;
+      padding: 10px;
+      background-color: #4caf50;
+      color: white;
+      font-size: 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    #toggleHistoryBtn:hover {
+      background-color: #45a049;
+    }
+
+    #historyPanel {
+      display: none;
+      font-size: 13px;
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-radius: 6px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 5px 0 10px 0;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Daily Check-In</h1>
+
+  <div class="input-wrapper">
+    <input type="text" id="newGoalInput" placeholder="New goal..." />
+    <button id="addGoalBtn">Add</button>
+  </div>
+
+  <div id="goalsContainer"></div>
+
+  <button id="toggleHistoryBtn">📅 View History</button>
+  <div id="historyPanel"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
